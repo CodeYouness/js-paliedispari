@@ -24,6 +24,7 @@ function palindromoCheck(word) {
 
 const userChoice = prompt('fa la tua scelta, pari o dispari?');
 let userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
+let computerNumber = getRandomInt(1, 5)
 
 function getRandomInt(min, max) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
@@ -36,13 +37,12 @@ if (userNumber > 5 || userNumber < 1) {
 }
 
 function numberEvenOrShots(firstNumber, secondNumber) {
-    if ((firstNumber + secondNumber) % 2 === 0) {
+    if ((firstNumber + secondNumber) % 2 == 0) {
         return true
     } else {
         return false
     }
 }
 
-
-
-console.log(userChoice, userNumber)
+let sfida = numberEvenOrShots(userNumber, computerNumber)
+console.log(sfida, computerNumber, userNumber, userChoice)
