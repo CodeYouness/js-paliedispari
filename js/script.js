@@ -22,11 +22,18 @@ function palindromoCheck(word) {
 //pari e dispari
 
 const userChoice = prompt('fa la tua scelta, pari o dispari?');
-const userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
+let userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
 
 function getRandomInt(min, max) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
     return randomNumber
 }
 
+if (userNumber > 5) {
+    userNumber = getRandomInt(1, 5)
+    console.log('siccome non rispetti le regole, ho cambiato numero in: ' + randomNumber)
+}
 
+
+
+console.log(userChoice, userNumber)
