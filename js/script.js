@@ -5,7 +5,14 @@ function palindromoCheck(word) {
     for (let i = word.length - 1; i >= 0; i--) {
         reversedWord += word[i]
     }
-    console.log(reversedWord)
+    if (word === reversedWord) {
+        console.log('è palindroma')
+        return true
+    } else {
+        console.log('non è palindroma')
+        return false
+    }
 }
 
-
+let result = palindromoCheck(userWord)
+console.log(result)
