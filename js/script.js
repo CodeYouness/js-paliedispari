@@ -22,7 +22,7 @@ function palindromoCheck(word) {
 
 //pari e dispari
 
-const userChoice = prompt('fa la tua scelta, pari o dispari?');
+const userChoice = prompt('fa la tua scelta, pari o dispari?').toLowerCase().trim();
 let userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
 let computerNumber = getRandomInt(1, 5)
 
@@ -44,5 +44,15 @@ function numberEvenOrShots(firstNumber, secondNumber) {
     }
 }
 
+
+
 let sfida = numberEvenOrShots(userNumber, computerNumber)
-console.log(sfida, computerNumber, userNumber, userChoice)
+console.log('computer:', computerNumber, 'il tuo numero:', userNumber, 'la tua scelta:', userChoice)
+
+if (sfida && userChoice === 'pari') {
+    console.log('complimenti, hai vintissimo')
+} else if (sfida === false && userChoice === 'dispari') {
+    console.log('complimenti, hai vintissimo')
+} else {
+    console.log('bravo, hai perso')
+}
