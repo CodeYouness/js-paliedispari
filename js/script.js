@@ -1,6 +1,6 @@
 //palindroma
 
-const userWord = prompt('insert your word')
+//const userWord = prompt('insert your word')
 
 function palindromoCheck(word) {
     word = word.toLowerCase().trim()
@@ -17,24 +17,31 @@ function palindromoCheck(word) {
     }
 }
 
-let result = palindromoCheck(userWord)
-console.log(result)
+//let result = palindromoCheck(userWord)
+//console.log(result)
 
 //pari e dispari
 
-//const userChoice = prompt('fa la tua scelta, pari o dispari?');
-//let userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
+const userChoice = prompt('fa la tua scelta, pari o dispari?');
+let userNumber = Number.parseInt(prompt('scegli un numero da 1 a 5'), 10)
 
 function getRandomInt(min, max) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
     return randomNumber;
 }
 
-if (userNumber > 5 && userNumber < 1) {
+if (userNumber > 5 || userNumber < 1) {
     userNumber = getRandomInt(1, 5)
     console.log('siccome non rispetti le regole, ho cambiato il tuo numero in: ' + userNumber)
 }
 
+function numberEvenOrShots(firstNumber, secondNumber) {
+    if ((firstNumber + secondNumber) % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 
