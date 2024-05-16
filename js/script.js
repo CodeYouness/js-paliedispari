@@ -1,6 +1,6 @@
 //palindroma
 
-//const userWord = prompt('insert your word')
+const userWord = prompt('insert your word')
 
 function palindromoCheck(word) {
     word = word.toLowerCase().trim()
@@ -17,8 +17,8 @@ function palindromoCheck(word) {
     }
 }
 
-//let result = palindromoCheck(userWord)
-//console.log(result)
+let result = palindromoCheck(userWord)
+console.log(result)
 
 //pari e dispari
 
@@ -43,8 +43,6 @@ function numberEvenOrShots(firstNumber, secondNumber) {
         return false
     }
 }
-
-
 
 let sfida = numberEvenOrShots(userNumber, computerNumber)
 console.log('computer:', computerNumber, 'il tuo numero:', userNumber, 'la tua scelta:', userChoice)
